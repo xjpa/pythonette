@@ -4,19 +4,21 @@ learning compilers by building one
 
 # goals
 
-frontend
+frontend:
 
 - scanner (lexical analysis)
-- parser (syntax analysis with ast generation)
-- error reporter (error handling and basic semantic checks)
+- parser (syntax analysis with ast construction; supports recursive descent, pratt, shunting yard, peg)
+- error reporter (context-sensitive error messages)
+- semantic analyzer (basic semantic checks and runtime type checking)
 
-backend
+backend:
 
-- ir/bytecode generator (code generation)
-- optimizer (constant folding, dead code elimination, etc.)
-- virtual machine (bytecode execution engine)
+- ir/bytecode generator (code generation for a stack-based vm)
+- optimizer (constant folding, dead code elimination, loop unrolling)
+- virtual machine (bytecode execution engine with control flow, memory, and state management)
+- llvm integration (llvm ir, clang, llvmlite for advanced code generation)
 
-features
+features/explorations
 
-- modular compiler architecture
+- modular compiler architecture with distinct components for each phase
 - implementation of a simple procedural language
