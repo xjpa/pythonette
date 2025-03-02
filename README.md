@@ -21,4 +21,4 @@ backend:
 features/explorations
 
 - modular compiler architecture with distinct components for each phase
-- implementation of a simple procedural language
+- dynamically typed procedural language
